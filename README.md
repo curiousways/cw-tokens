@@ -5,8 +5,13 @@ front end (curiousways.com, projects.crwys.net, and anything that follows).
 
 **This repo is the only place a raw colour value may be written.**
 
-The `@theme` block is the canonical copy from curiousways.com. Font files
-stay in each consuming repo — tokens name the family, they do not ship it.
+The first `@theme` block is the canonical copy from curiousways.com.
+A second block names the neutrals both sites already used as raw hex
+(ink, paper, muted, body, line, wash). Those names are not yet on the
+marketing site — confirm them before treating them as canonical.
+
+Font files stay in each consuming repo — tokens name the family, they
+do not ship it.
 
 ## Prefix taxonomy
 
@@ -28,6 +33,3 @@ a `t-` or `c-` class.
 ```
 "cw-tokens": "github:curiousways/cw-tokens"
 ```
-
-Until the GitHub repo exists, local work uses
-`"cw-tokens": "file:../../Packages/cw-tokens"`.
