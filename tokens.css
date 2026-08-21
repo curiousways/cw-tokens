@@ -29,3 +29,24 @@
     --color-cw-emerald: #10b981; /* Vivid green - fresh and modern */
     --color-cw-magenta: #d946ef; /* Bold pink-purple - creative and distinctive */
 }
+
+/* Neutrals both sites already paint with as raw hex (curiousways.com
+   site.css and the project pages). They are not in the marketing @theme
+   yet. Named here so consumers never write a hex and never pick up
+   Tailwind v4's oklch slate, which is not #64748b. Confirm before this
+   block is treated as canonical. */
+@theme {
+    --color-cw-ink: #000;
+    --color-cw-paper: #fff;
+    --color-cw-body: #334155;
+    --color-cw-muted: #64748b;
+    --color-cw-line: #e2e8f0;
+    --color-cw-wash: #f8fafc;
+    --color-cw-slate-100: #f1f5f9;
+    --color-cw-slate-300: #cbd5e1;
+    --color-cw-slate-800: #1e293b;
+    --color-cw-orange-ink: #9a3412;
+    --color-cw-green-wash: #ecfdf5;
+    --color-cw-zinc-50: #fafafa;
+    --color-cw-zinc-600: #52525b;
+}
