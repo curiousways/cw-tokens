@@ -1,0 +1,12 @@
+{
+  "name": "cw-tokens",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Curious Ways design tokens. The only place a raw colour value may be written.",
+  "license": "UNLICENSED",
+  "style": "tokens.css",
+  "exports": {
+    ".": "./tokens.css",
+    "./tokens.css": "./tokens.css"
+  }
+}

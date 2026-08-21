@@ -1,0 +1,31 @@
+/* Curious Ways design tokens.
+   Lifted unchanged from curiousways.com resources/css/site.css @theme.
+   This file is the only place a raw colour value may be written. */
+
+@theme {
+    --font-untitled-sans: "Untitled Sans", sans-serif;
+
+    /* Primary card backgrounds */
+    --color-cw-sunny-yellow: #fde047;
+    --color-cw-vibrant-teal: #a8d9e7;
+    --color-cw-soft-lavender: #c4b5fd;
+
+    /* Lighter complimentary */
+    --color-cw-coral-pink: #fda4af; /* Warm, energetic complement */
+    --color-cw-sage-green: #a7f3d0; /* Fresh, natural tone */
+    --color-cw-peach: #fed7aa; /* Warm bridge color */
+    --color-cw-sky-blue: #bae6fd; /* Cool, trustworthy tone */
+    --color-cw-mint: #bbf7d0; /* Light, refreshing green */
+    --color-cw-warm-purple: #ddd6fe; /* Gentle purple variation */
+
+    /* Strong */
+    --color-cw-golden-yellow: #eab308; /* Bold yellow - strong contrast */
+    --color-cw-deep-teal: #0891b2; /* Rich teal - professional and visible */
+    --color-cw-rich-purple: #7c3aed; /* Strong purple - confident and bold */
+    --color-cw-vibrant-coral: #ef4444; /* Bold coral-red - energetic and clear */
+    --color-cw-forest-green: #059669; /* Deep green - trustworthy and strong */
+    --color-cw-bright-orange: #ea580c; /* Bold orange - warm and attention-grabbing */
+    --color-cw-ocean-blue: #0284c7; /* Strong blue - reliable and professional */
+    --color-cw-emerald: #10b981; /* Vivid green - fresh and modern */
+    --color-cw-magenta: #d946ef; /* Bold pink-purple - creative and distinctive */
+}
