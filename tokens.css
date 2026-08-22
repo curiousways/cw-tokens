@@ -1,6 +1,14 @@
 /* Curious Ways design tokens.
-   Lifted unchanged from curiousways.com resources/css/site.css @theme.
-   This file is the only place a raw colour value may be written. */
+   The only place a raw colour or type-scale value may be written.
+   Consuming sites import this file. Font files stay in each repo —
+   tokens name the family, they do not ship it.
+
+   Italic is not licensed yet. Do not set font-style: italic until
+   Untitled Sans Italic is added to the consuming repo. */
+
+/* --------------------------------------------------------------------------
+   Colour — Tailwind v4 @theme so marketing keeps bg-cw-* / text-cw-*
+   -------------------------------------------------------------------------- */
 
 @theme {
     --font-untitled-sans: "Untitled Sans", sans-serif;
@@ -10,32 +18,26 @@
     --color-cw-vibrant-teal: #a8d9e7;
     --color-cw-soft-lavender: #c4b5fd;
 
-    /* Lighter complimentary */
-    --color-cw-coral-pink: #fda4af; /* Warm, energetic complement */
-    --color-cw-sage-green: #a7f3d0; /* Fresh, natural tone */
-    --color-cw-peach: #fed7aa; /* Warm bridge color */
-    --color-cw-sky-blue: #bae6fd; /* Cool, trustworthy tone */
-    --color-cw-mint: #bbf7d0; /* Light, refreshing green */
-    --color-cw-warm-purple: #ddd6fe; /* Gentle purple variation */
+    /* Lighter complementary */
+    --color-cw-coral-pink: #fda4af;
+    --color-cw-sage-green: #a7f3d0;
+    --color-cw-peach: #fed7aa;
+    --color-cw-sky-blue: #bae6fd;
+    --color-cw-mint: #bbf7d0;
+    --color-cw-warm-purple: #ddd6fe;
 
     /* Strong */
-    --color-cw-golden-yellow: #eab308; /* Bold yellow - strong contrast */
-    --color-cw-deep-teal: #0891b2; /* Rich teal - professional and visible */
-    --color-cw-rich-purple: #7c3aed; /* Strong purple - confident and bold */
-    --color-cw-vibrant-coral: #ef4444; /* Bold coral-red - energetic and clear */
-    --color-cw-forest-green: #059669; /* Deep green - trustworthy and strong */
-    --color-cw-bright-orange: #ea580c; /* Bold orange - warm and attention-grabbing */
-    --color-cw-ocean-blue: #0284c7; /* Strong blue - reliable and professional */
-    --color-cw-emerald: #10b981; /* Vivid green - fresh and modern */
-    --color-cw-magenta: #d946ef; /* Bold pink-purple - creative and distinctive */
-}
+    --color-cw-golden-yellow: #eab308;
+    --color-cw-deep-teal: #0891b2;
+    --color-cw-rich-purple: #7c3aed;
+    --color-cw-vibrant-coral: #ef4444;
+    --color-cw-forest-green: #059669;
+    --color-cw-bright-orange: #ea580c;
+    --color-cw-ocean-blue: #0284c7;
+    --color-cw-emerald: #10b981;
+    --color-cw-magenta: #d946ef;
 
-/* Neutrals both sites already paint with as raw hex (curiousways.com
-   site.css and the project pages). They are not in the marketing @theme
-   yet. Named here so consumers never write a hex and never pick up
-   Tailwind v4's oklch slate, which is not #64748b. Confirm before this
-   block is treated as canonical. */
-@theme {
+    /* Neutrals — hex, not Tailwind v4 oklch slate */
     --color-cw-ink: #000;
     --color-cw-paper: #fff;
     --color-cw-body: #334155;
@@ -49,4 +51,117 @@
     --color-cw-green-wash: #ecfdf5;
     --color-cw-zinc-50: #fafafa;
     --color-cw-zinc-600: #52525b;
+}
+
+/* --------------------------------------------------------------------------
+   Type scale — lifted from live curiousways.com heading classes and
+   homepage utilities. Breakpoints match Tailwind md (48rem) and lg (64rem).
+   :root so consumers without Tailwind still get the numbers.
+   -------------------------------------------------------------------------- */
+
+:root {
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    --tracking-heading: -0.025em;
+    --tracking-caps: 0.2em;
+    --tracking-caps-tight: 0.15em;
+
+    /* mega = text-4xl / md:text-5xl / lg:text-6xl + md:leading-16 */
+    --text-mega: 2.25rem;
+    --leading-mega: 2.5rem;
+
+    /* med = text-2xl leading-7 */
+    --text-med: 1.5rem;
+    --leading-med: 1.75rem;
+
+    /* sml = inherited (1rem) then md:text-xl, leading-6 */
+    --text-sml: 1rem;
+    --leading-sml: 1.5rem;
+
+    /* micro = text-base */
+    --text-micro: 1rem;
+    --leading-micro: 1.5rem;
+
+    /* lead = text-lg md:text-xl */
+    --text-lead: 1.125rem;
+    --leading-lead: 1.75rem;
+
+    /* body = text-base */
+    --text-body: 1rem;
+    --leading-body: 1.5rem;
+
+    /* caption = text-sm */
+    --text-caption: 0.875rem;
+    --leading-caption: 1.25rem;
+
+    /* fine = text-xs — kickers, small caps labels */
+    --text-fine: 0.75rem;
+    --leading-fine: 1rem;
+}
+
+@media (min-width: 48rem) {
+    :root {
+        --text-mega: 3rem;
+        --leading-mega: 4rem;
+        --text-sml: 1.25rem;
+        --text-lead: 1.25rem;
+    }
+}
+
+@media (min-width: 64rem) {
+    :root {
+        --text-mega: 3.75rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Type classes — both sites use these names. Size / weight / leading /
+   tracking only. Colour and margin stay with the consumer.
+   -------------------------------------------------------------------------- */
+
+.t-heading-mega {
+    font-size: var(--text-mega);
+    line-height: var(--leading-mega);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--tracking-heading);
+}
+
+.t-heading-med {
+    font-size: var(--text-med);
+    line-height: var(--leading-med);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--tracking-heading);
+}
+
+.t-heading-sml {
+    font-size: var(--text-sml);
+    line-height: var(--leading-sml);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--tracking-heading);
+}
+
+.t-heading-micro {
+    font-size: var(--text-micro);
+    line-height: var(--leading-micro);
+    font-weight: var(--font-weight-medium);
+}
+
+.t-lead {
+    font-size: var(--text-lead);
+    line-height: var(--leading-lead);
+    font-weight: var(--font-weight-regular);
+}
+
+.t-body {
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+    font-weight: var(--font-weight-regular);
+}
+
+.t-caption {
+    font-size: var(--text-caption);
+    line-height: var(--leading-caption);
+    font-weight: var(--font-weight-regular);
 }

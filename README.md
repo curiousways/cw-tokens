@@ -1,17 +1,34 @@
 # cw-tokens
 
-Curious Ways design tokens. Consumed as a git dependency by every CW
-front end (curiousways.com, projects.crwys.net, and anything that follows).
+Curious Ways design tokens. The only place a raw colour or type-scale
+value may be written. Consumed by curiousways.com and projects.crwys.net.
 
-**This repo is the only place a raw colour value may be written.**
+Public: `github:curiousways/cw-tokens`. Font files stay in each consuming
+repo — tokens name the family, they do not ship it.
 
-The first `@theme` block is the canonical copy from curiousways.com.
-A second block names the neutrals both sites already used as raw hex
-(ink, paper, muted, body, line, wash). Those names are not yet on the
-marketing site — confirm them before treating them as canonical.
+Italic is not licensed yet. Do not italicise until Untitled Sans Italic
+is added to the consuming site.
 
-Font files stay in each consuming repo — tokens name the family, they
-do not ship it.
+## Type
+
+Live marketing scale. Change a variable here and both sites follow,
+once they have pulled this package.
+
+| Class | Role | Size |
+| --- | --- | --- |
+| `.t-heading-mega` | Page titles, hero | 36 → 48 → 60px |
+| `.t-heading-med` | Section / card headings | 24px |
+| `.t-heading-sml` | Mini titles | 16 → 20px |
+| `.t-heading-micro` | Footer labels, metadata | 16px |
+| `.t-lead` | Standfirst after a title | 18 → 20px |
+| `.t-body` | Default paragraph | 16px |
+| `.t-caption` | Legal, as-of, captions | 14px |
+
+`--text-fine` (12px) is the kicker / small-caps size. No class — compose
+it in the component.
+
+Weights shipped: 400, 500, 700. Headings are 500. Tracking on headings
+is `−0.025em`.
 
 ## Prefix taxonomy
 
@@ -25,7 +42,7 @@ do not ship it.
 
 BEM for elements and modifiers: `c-masthead__logo`, `c-step--done`.
 
-Custom classes are plain CSS referencing theme variables. Do not `@apply`
+Custom classes are plain CSS referencing these variables. Do not `@apply`
 a `t-` or `c-` class.
 
 ## Install
@@ -33,3 +50,8 @@ a `t-` or `c-` class.
 ```
 "cw-tokens": "github:curiousways/cw-tokens"
 ```
+
+Then `@import "cw-tokens/tokens.css";` from the site stylesheet.
+
+After a token change: publish this repo, then update the dependency on
+each consumer and deploy both.
