@@ -30,6 +30,36 @@ it in the component.
 Weights shipped: 400, 500, 700. Headings are 500. Tracking on headings
 is `−0.025em`.
 
+## Colour
+
+`@theme` wipes Tailwind's default colour map (`--color-*: initial`) so
+only `cw-*` utilities compile. `transparent` is restored for
+`focus:border-transparent` and `decoration-transparent`.
+
+Neutrals are roles, not a numbered scale. Hex, not v4 oklch slate.
+Do not derive the ladder with `color-mix()` or `oklch(from …)`.
+
+| Role | Hex | Use |
+| --- | --- | --- |
+| `ink` | `#000` | Headings, chrome |
+| `near-ink` | `#0f172a` | Near-black text |
+| `strong` | `#1e293b` | Strong body |
+| `body` | `#334155` | Default copy |
+| `dim` | `#475569` | Secondary copy |
+| `muted` | `#64748b` | Captions, meta |
+| `subtle` | `#94a3b8` | Quiet labels |
+| `rule` | `#cbd5e1` | Stronger rules |
+| `line` | `#e2e8f0` | Hairlines |
+| `panel` | `#f1f5f9` | Cards, bands |
+| `wash` | `#f8fafc` | Page wash |
+| `mist` | `#fafafa` | Warm-neutral wash (not `wash`) |
+| `paper` | `#fff` | Surfaces |
+| `quiet` | `#52525b` | Print / low-contrast chrome |
+| `alert` | `#f87171` | Required asterisks, form errors |
+
+Classes: `text-cw-body`, `bg-cw-panel`, `border-cw-rule`. Brand hues
+stay named as they already were (`sunny-yellow`, `forest-green`, …).
+
 ## Prefix taxonomy
 
 | Prefix | Role |

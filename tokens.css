@@ -11,6 +11,11 @@
    -------------------------------------------------------------------------- */
 
 @theme {
+    /* Wipe Tailwind's default colour map so only cw-* utilities
+       compile. Keep transparent for focus:border-transparent. */
+    --color-*: initial;
+    --color-transparent: transparent;
+
     --font-untitled-sans: "Untitled Sans", sans-serif;
 
     /* Primary card backgrounds */
@@ -31,6 +36,7 @@
     --color-cw-deep-teal: #0891b2;
     --color-cw-rich-purple: #7c3aed;
     --color-cw-vibrant-coral: #ef4444;
+    --color-cw-alert: #f87171;
     --color-cw-forest-green: #059669;
     --color-cw-bright-orange: #ea580c;
     --color-cw-ocean-blue: #0284c7;
@@ -54,11 +60,11 @@
     --color-cw-line: #e2e8f0;
     --color-cw-panel: #f1f5f9;
     --color-cw-wash: #f8fafc;
+    --color-cw-mist: #fafafa;
     --color-cw-paper: #fff;
+    --color-cw-quiet: #52525b;
     --color-cw-orange-ink: #9a3412;
     --color-cw-green-wash: #ecfdf5;
-    --color-cw-zinc-50: #fafafa;
-    --color-cw-zinc-600: #52525b;
 }
 
 /* --------------------------------------------------------------------------
