@@ -3,8 +3,9 @@
    Consuming sites import this file. Font files stay in each repo —
    tokens name the family, they do not ship it.
 
-   Italic is not licensed yet. Do not set font-style: italic until
-   Untitled Sans Italic is added to the consuming repo. */
+   Italic is licensed. Each consumer ships untitled-sans-italic.woff2
+   with the roman cuts. Do not set font-style: italic unless that file
+   is loaded. */
 
 /* --------------------------------------------------------------------------
    Colour — Tailwind v4 @theme so marketing keeps bg-cw-* / text-cw-*

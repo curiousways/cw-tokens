@@ -6,8 +6,8 @@ value may be written. Consumed by curiousways.com and projects.crwys.net.
 Public: `github:curiousways/cw-tokens`. Font files stay in each consuming
 repo — tokens name the family, they do not ship it.
 
-Italic is not licensed yet. Do not italicise until Untitled Sans Italic
-is added to the consuming site.
+Italic is licensed. Each consuming site ships `untitled-sans-italic.woff2`.
+Do not italicise unless that file is loaded.
 
 ## Type
 
@@ -27,8 +27,8 @@ once they have pulled this package.
 `--text-fine` (12px) is the kicker / small-caps size. No class — compose
 it in the component.
 
-Weights shipped: 400, 500, 700. Headings are 500. Tracking on headings
-is `−0.025em`.
+Weights shipped: 400, 500, 700. Italic 400 is licensed — each consumer
+ships the woff2. Headings are 500. Tracking on headings is `−0.025em`.
 
 ## Colour
 
