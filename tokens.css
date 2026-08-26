@@ -207,8 +207,11 @@
     text-decoration-color: var(--cw-mint);
 }
 
-/* Testimonials stay roman. Other blockquotes inherit italic. */
-.is-testimonial {
+/* Testimonials stay roman. Other blockquotes inherit italic.
+   cite is italic in the UA stylesheet, so it must be reset here
+   or it wins over the inherited normal. */
+.is-testimonial,
+.is-testimonial cite {
     font-style: normal;
 }
 
