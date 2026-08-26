@@ -80,6 +80,9 @@
     --tracking-caps: 0.2em;
     --tracking-caps-tight: 0.15em;
 
+    --cw-mark-thickness: 0.2em;
+    --cw-mark-offset: 0.1em;
+
     /* mega = text-4xl / md:text-5xl / lg:text-6xl + md:leading-16 */
     --text-mega: 2.25rem;
     --leading-mega: 2.5rem;
@@ -180,4 +183,42 @@
     font-size: var(--text-caption);
     line-height: var(--leading-caption);
     font-weight: var(--font-weight-regular);
+}
+
+.t-kicker {
+    font-size: var(--text-fine);
+    line-height: var(--leading-fine);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    font-weight: var(--font-weight-regular);
+}
+
+/* Highlight — a rule, not a wash. Thickness and offset are in em
+   so the mark scales with the type. */
+.u-mark {
+    text-decoration-line: underline;
+    text-decoration-color: var(--cw-sunny-yellow);
+    text-decoration-thickness: var(--cw-mark-thickness);
+    text-underline-offset: var(--cw-mark-offset);
+    text-decoration-skip-ink: none;
+}
+
+.u-mark--mint {
+    text-decoration-color: var(--cw-mint);
+}
+
+/* Testimonials stay roman. Other blockquotes inherit italic. */
+.is-testimonial {
+    font-style: normal;
+}
+
+.u-link {
+    color: var(--cw-ink);
+    text-decoration-line: underline;
+    text-underline-offset: 0.25rem;
+    text-decoration-thickness: 2px;
+}
+
+.u-link:hover {
+    text-decoration-color: var(--cw-forest-green);
 }

@@ -45,9 +45,14 @@ once they have pulled this package.
 | `.t-lead` | Standfirst after a title | 18 → 20px |
 | `.t-body` | Default paragraph | 16px |
 | `.t-caption` | Legal, as-of, captions | 14px |
+| `.t-kicker` | Caps labels | 12px (`--text-fine`) |
 
-`--text-fine` (12px) is the kicker / small-caps size. `--text-nano` (10px)
-is chips and pill labels. No class — compose them in the component.
+`--text-nano` (10px) is chips and pill labels. No class — compose it
+in the component.
+
+`.u-mark` is the yellow underline highlight; `.u-mark--mint` changes
+only the decoration colour. `.u-link` is the body-link recipe.
+`.is-testimonial` keeps a quote roman.
 
 These `--text-*` names collide with Tailwind v4's font-size namespace.
 They stay in plain `:root`. Do not move them into the adapter.
