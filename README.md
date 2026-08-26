@@ -61,29 +61,28 @@ Raw names are `--cw-*`. The adapter wipes Tailwind's default colour map
 (`--color-*: initial`) so only `cw-*` utilities compile. `transparent`
 is restored for `focus:border-transparent` and `decoration-transparent`.
 
-Neutrals are roles, not a numbered scale. Hex, not v4 oklch slate.
+Neutrals are a position on the ink-to-paper ramp. Hex, not v4 oklch slate.
 Do not derive the ladder with `color-mix()` or `oklch(from …)`.
 
-| Role | Hex | Use |
-| --- | --- | --- |
-| `ink` | `#000` | Headings, chrome |
-| `near-ink` | `#0f172a` | Near-black text |
-| `strong` | `#1e293b` | Strong body |
-| `body` | `#334155` | Default copy |
-| `dim` | `#475569` | Secondary copy |
-| `muted` | `#64748b` | Captions, meta |
-| `subtle` | `#94a3b8` | Quiet labels |
-| `rule` | `#cbd5e1` | Stronger rules |
-| `line` | `#e2e8f0` | Hairlines |
-| `panel` | `#f1f5f9` | Cards, bands |
-| `wash` | `#f8fafc` | Page wash |
-| `mist` | `#fafafa` | Warm-neutral wash (not `wash`) |
-| `paper` | `#fff` | Surfaces |
-| `quiet` | `#52525b` | Print / low-contrast chrome |
-| `alert` | `#f87171` | Required asterisks, form errors |
+| Token | Hex |
+| --- | --- |
+| `ink` | `#000` |
+| `ink-strong` | `#1e293b` |
+| `ink-mid` | `#334155` |
+| `ink-dim` | `#475569` |
+| `ink-muted` | `#64748b` |
+| `ink-subtle` | `#94a3b8` |
+| `ink-faint` | `#cbd5e1` |
+| `ink-ghost` | `#e2e8f0` |
+| `paper-sunk` | `#f1f5f9` |
+| `paper-soft` | `#f8fafc` |
+| `paper` | `#fff` |
 
-Classes: `text-cw-body`, `bg-cw-panel`, `border-cw-rule`. Brand hues
-stay named as they already were (`sunny-yellow`, `forest-green`, …).
+Accents off the ramp: `orange-ink` `#9a3412`, `green-tint` `#ecfdf5`,
+`alert` `#f87171`.
+
+Classes: `text-cw-ink-mid`, `bg-cw-paper-sunk`, `border-cw-ink-faint`.
+Brand hues stay named as they already were (`sunny-yellow`, `forest-green`, …).
 
 ## Prefix taxonomy
 

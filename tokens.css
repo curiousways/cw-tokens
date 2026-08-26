@@ -40,28 +40,40 @@
     --cw-emerald: #10b981;
     --cw-magenta: #d946ef;
 
-    /* Neutrals — roles, not a numbered scale. Hex, not Tailwind v4
-       oklch slate. Do not derive these with color-mix() or
-       oklch(from …): mixing ink↔paper drops the cool hue; mixing
-       from body is close but not the hex both sites already ship.
-       Relative colour is the right tool for hover/focus on a brand
-       hue, not for this ladder. */
+    /* Neutrals — position on the ink-to-paper ramp. Names do not
+       describe use. Hex, not Tailwind v4 oklch slate. Do not derive
+       these with color-mix() or oklch(from …): mixing ink↔paper
+       drops the cool hue. Relative colour is the right tool for
+       hover/focus on a brand hue, not for this ladder. */
     --cw-ink: #000;
-    --cw-near-ink: #0f172a;
-    --cw-strong: #1e293b;
-    --cw-body: #334155;
-    --cw-dim: #475569;
-    --cw-muted: #64748b;
-    --cw-subtle: #94a3b8;
-    --cw-rule: #cbd5e1;
-    --cw-line: #e2e8f0;
-    --cw-panel: #f1f5f9;
-    --cw-wash: #f8fafc;
-    --cw-mist: #fafafa;
+    --cw-ink-strong: #1e293b;
+    --cw-ink-mid: #334155;
+    --cw-ink-dim: #475569;
+    --cw-ink-muted: #64748b;
+    --cw-ink-subtle: #94a3b8;
+    --cw-ink-faint: #cbd5e1;
+    --cw-ink-ghost: #e2e8f0;
+    --cw-paper-sunk: #f1f5f9;
+    --cw-paper-soft: #f8fafc;
     --cw-paper: #fff;
-    --cw-quiet: #52525b;
     --cw-orange-ink: #9a3412;
-    --cw-green-wash: #ecfdf5;
+    --cw-green-tint: #ecfdf5;
+
+    /* Deprecated. Remove once both consumers are migrated — see
+       brief-family-alignment.md. Do not use in new code. */
+    --cw-near-ink: var(--cw-ink-strong);
+    --cw-strong: var(--cw-ink-strong);
+    --cw-body: var(--cw-ink-mid);
+    --cw-dim: var(--cw-ink-dim);
+    --cw-quiet: var(--cw-ink-dim);
+    --cw-muted: var(--cw-ink-muted);
+    --cw-subtle: var(--cw-ink-subtle);
+    --cw-rule: var(--cw-ink-faint);
+    --cw-line: var(--cw-ink-ghost);
+    --cw-panel: var(--cw-paper-sunk);
+    --cw-wash: var(--cw-paper-soft);
+    --cw-mist: var(--cw-paper-soft);
+    --cw-green-wash: var(--cw-green-tint);
 }
 
 /* --------------------------------------------------------------------------
