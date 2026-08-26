@@ -58,22 +58,6 @@
     --cw-paper: #fff;
     --cw-orange-ink: #9a3412;
     --cw-green-tint: #ecfdf5;
-
-    /* Deprecated. Remove once both consumers are migrated — see
-       brief-family-alignment.md. Do not use in new code. */
-    --cw-near-ink: var(--cw-ink-strong);
-    --cw-strong: var(--cw-ink-strong);
-    --cw-body: var(--cw-ink-mid);
-    --cw-dim: var(--cw-ink-dim);
-    --cw-quiet: var(--cw-ink-dim);
-    --cw-muted: var(--cw-ink-muted);
-    --cw-subtle: var(--cw-ink-subtle);
-    --cw-rule: var(--cw-ink-faint);
-    --cw-line: var(--cw-ink-ghost);
-    --cw-panel: var(--cw-paper-sunk);
-    --cw-wash: var(--cw-paper-soft);
-    --cw-mist: var(--cw-paper-soft);
-    --cw-green-wash: var(--cw-green-tint);
 }
 
 /* --------------------------------------------------------------------------
