@@ -196,6 +196,7 @@
 /* Highlight — a rule, not a wash. Thickness and offset are in em
    so the mark scales with the type. */
 .u-mark {
+    font-style: normal;
     text-decoration-line: underline;
     text-decoration-color: var(--cw-sunny-yellow);
     text-decoration-thickness: var(--cw-mark-thickness);
