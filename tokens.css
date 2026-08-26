@@ -114,6 +114,10 @@
     /* fine = text-xs — kickers, small caps labels */
     --text-fine: 0.75rem;
     --leading-fine: 1rem;
+
+    /* nano = below fine — chips and pill labels */
+    --text-nano: 0.625rem;
+    --leading-nano: 0.875rem;
 }
 
 @media (min-width: 48rem) {

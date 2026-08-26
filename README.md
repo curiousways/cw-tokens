@@ -24,8 +24,8 @@ once they have pulled this package.
 | `.t-body` | Default paragraph | 16px |
 | `.t-caption` | Legal, as-of, captions | 14px |
 
-`--text-fine` (12px) is the kicker / small-caps size. No class — compose
-it in the component.
+`--text-fine` (12px) is the kicker / small-caps size. `--text-nano` (10px)
+is chips and pill labels. No class — compose them in the component.
 
 Weights shipped: 400, 500, 700. Italic 400 is licensed — each consumer
 ships the woff2. Headings are 500. Tracking on headings is `−0.025em`.
