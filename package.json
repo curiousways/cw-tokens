@@ -7,6 +7,7 @@
   "style": "tokens.css",
   "exports": {
     ".": "./tokens.css",
-    "./tokens.css": "./tokens.css"
+    "./tokens.css": "./tokens.css",
+    "./tailwind.css": "./tailwind.css"
   }
 }

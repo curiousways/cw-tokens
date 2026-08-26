@@ -9,6 +9,28 @@ repo — tokens name the family, they do not ship it.
 Italic is licensed. Each consuming site ships `untitled-sans-italic.woff2`.
 Do not italicise unless that file is loaded.
 
+## Entry points
+
+| Import | What it is |
+| --- | --- |
+| `cw-tokens` / `cw-tokens/tokens.css` | Raw tokens. Plain `:root`. Framework-free. |
+| `cw-tokens/tailwind.css` | Tailwind adapter. Maps names only. No hex. |
+
+Tailwind sites import both, raw first:
+
+```
+@import "cw-tokens/tokens.css";
+@import "cw-tokens/tailwind.css";
+```
+
+`--cw-ink` is the token. `--color-cw-ink` is the alias that generates
+`bg-cw-ink` / `text-cw-ink`. Do not write a hex in the adapter. Adding a
+colour is two adjacent lines: the value in `tokens.css`, the alias in
+`tailwind.css`.
+
+`--font-untitled-sans` stays the Tailwind-facing font name
+(`font-untitled-sans` on `<body>`). Its value is `var(--cw-font-sans)`.
+
 ## Type
 
 Live marketing scale. Change a variable here and both sites follow,
@@ -27,14 +49,17 @@ once they have pulled this package.
 `--text-fine` (12px) is the kicker / small-caps size. `--text-nano` (10px)
 is chips and pill labels. No class — compose them in the component.
 
+These `--text-*` names collide with Tailwind v4's font-size namespace.
+They stay in plain `:root`. Do not move them into the adapter.
+
 Weights shipped: 400, 500, 700. Italic 400 is licensed — each consumer
 ships the woff2. Headings are 500. Tracking on headings is `−0.025em`.
 
 ## Colour
 
-`@theme` wipes Tailwind's default colour map (`--color-*: initial`) so
-only `cw-*` utilities compile. `transparent` is restored for
-`focus:border-transparent` and `decoration-transparent`.
+Raw names are `--cw-*`. The adapter wipes Tailwind's default colour map
+(`--color-*: initial`) so only `cw-*` utilities compile. `transparent`
+is restored for `focus:border-transparent` and `decoration-transparent`.
 
 Neutrals are roles, not a numbered scale. Hex, not v4 oklch slate.
 Do not derive the ladder with `color-mix()` or `oklch(from …)`.
@@ -81,7 +106,7 @@ a `t-` or `c-` class.
 "cw-tokens": "github:curiousways/cw-tokens"
 ```
 
-Then `@import "cw-tokens/tokens.css";` from the site stylesheet.
+Then import both files from the site stylesheet, raw first.
 
 After a token change: publish this repo, then update the dependency on
 each consumer and deploy both.

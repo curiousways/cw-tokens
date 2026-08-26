@@ -1,0 +1,61 @@
+/* Tailwind adapter for cw-tokens.
+   Values live in tokens.css. This file maps them into Tailwind's theme so
+   bg-cw-* / text-cw-* / font-untitled-sans compile. It must contain no raw values.
+   Import tokens.css first. */
+
+@theme static {
+    /* Wipe Tailwind's default colour map so only cw-* utilities
+       compile. Keep transparent for focus:border-transparent. */
+    --color-*: initial;
+    --color-transparent: transparent;
+
+    --font-untitled-sans: var(--cw-font-sans);
+
+    /* Primary card backgrounds */
+    --color-cw-sunny-yellow: var(--cw-sunny-yellow);
+    --color-cw-vibrant-teal: var(--cw-vibrant-teal);
+    --color-cw-soft-lavender: var(--cw-soft-lavender);
+
+    /* Lighter complementary */
+    --color-cw-coral-pink: var(--cw-coral-pink);
+    --color-cw-sage-green: var(--cw-sage-green);
+    --color-cw-peach: var(--cw-peach);
+    --color-cw-sky-blue: var(--cw-sky-blue);
+    --color-cw-mint: var(--cw-mint);
+    --color-cw-warm-purple: var(--cw-warm-purple);
+
+    /* Strong */
+    --color-cw-golden-yellow: var(--cw-golden-yellow);
+    --color-cw-deep-teal: var(--cw-deep-teal);
+    --color-cw-rich-purple: var(--cw-rich-purple);
+    --color-cw-vibrant-coral: var(--cw-vibrant-coral);
+    --color-cw-alert: var(--cw-alert);
+    --color-cw-forest-green: var(--cw-forest-green);
+    --color-cw-bright-orange: var(--cw-bright-orange);
+    --color-cw-ocean-blue: var(--cw-ocean-blue);
+    --color-cw-emerald: var(--cw-emerald);
+    --color-cw-magenta: var(--cw-magenta);
+
+    /* Neutrals — roles, not a numbered scale. Hex, not Tailwind v4
+       oklch slate. Do not derive these with color-mix() or
+       oklch(from …): mixing ink↔paper drops the cool hue; mixing
+       from body is close but not the hex both sites already ship.
+       Relative colour is the right tool for hover/focus on a brand
+       hue, not for this ladder. */
+    --color-cw-ink: var(--cw-ink);
+    --color-cw-near-ink: var(--cw-near-ink);
+    --color-cw-strong: var(--cw-strong);
+    --color-cw-body: var(--cw-body);
+    --color-cw-dim: var(--cw-dim);
+    --color-cw-muted: var(--cw-muted);
+    --color-cw-subtle: var(--cw-subtle);
+    --color-cw-rule: var(--cw-rule);
+    --color-cw-line: var(--cw-line);
+    --color-cw-panel: var(--cw-panel);
+    --color-cw-wash: var(--cw-wash);
+    --color-cw-mist: var(--cw-mist);
+    --color-cw-paper: var(--cw-paper);
+    --color-cw-quiet: var(--cw-quiet);
+    --color-cw-orange-ink: var(--cw-orange-ink);
+    --color-cw-green-wash: var(--cw-green-wash);
+}
