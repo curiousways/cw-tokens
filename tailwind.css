@@ -50,4 +50,7 @@
     --color-cw-paper: var(--cw-paper);
     --color-cw-orange-ink: var(--cw-orange-ink);
     --color-cw-green-tint: var(--cw-green-tint);
+    --color-cw-alert-ink: var(--cw-alert-ink);
+    --color-cw-teal-ink: var(--cw-teal-ink);
+    --color-cw-green-ink: var(--cw-green-ink);
 }

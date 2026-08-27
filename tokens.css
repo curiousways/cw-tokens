@@ -15,6 +15,8 @@
 :root {
     --cw-font-sans: "Untitled Sans", sans-serif;
 
+    /* The cw-* accents are background colours. Text uses the ink
+       ladder, or an -ink variant of the accent. */
     /* Primary card backgrounds */
     --cw-sunny-yellow: #fde047;
     --cw-vibrant-teal: #a8d9e7;
@@ -58,6 +60,12 @@
     --cw-paper: #fff;
     --cw-orange-ink: #9a3412;
     --cw-green-tint: #ecfdf5;
+
+    /* Ink variants — the accent colours are backgrounds. Use these when an
+       accent must carry text on paper. */
+    --cw-alert-ink: #b91c1c;   /* 6.47:1 on paper */
+    --cw-teal-ink: #155e75;    /* 7.27:1 on paper */
+    --cw-green-ink: #065f46;   /* 7.68:1 on paper */
 }
 
 /* --------------------------------------------------------------------------

@@ -84,8 +84,10 @@ Do not derive the ladder with `color-mix()` or `oklch(from …)`.
 | `paper-soft` | `#f8fafc` |
 | `paper` | `#fff` |
 
-Accents off the ramp: `orange-ink` `#9a3412`, `green-tint` `#ecfdf5`,
-`alert` `#f87171`.
+Accents are backgrounds. Text uses the ink ladder or an `-ink` variant:
+`orange-ink` `#9a3412`, `alert-ink` `#b91c1c`, `teal-ink` `#155e75`,
+`green-ink` `#065f46`. `green-tint` `#ecfdf5` is a wash. `alert` `#f87171`
+stays a background.
 
 Classes: `text-cw-ink-mid`, `bg-cw-paper-sunk`, `border-cw-ink-faint`.
 Brand hues stay named as they already were (`sunny-yellow`, `forest-green`, …).
