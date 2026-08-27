@@ -45,7 +45,8 @@ once they have pulled this package.
 | `.t-lead` | Standfirst after a title | 18 → 20px |
 | `.t-body` | Default paragraph | 16px |
 | `.t-caption` | Legal, as-of, captions | 14px |
-| `.t-kicker` | Caps labels | 12px (`--text-fine`) |
+| `.t-label` | Boxed labels | 12px (`--text-fine`) |
+| `.t-number` | Numbering only | 12px (`--text-fine`) |
 
 `--text-nano` (10px) is chips and pill labels. No class — compose it
 in the component.
